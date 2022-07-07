@@ -13,6 +13,7 @@ def lambda_handler(event, context):
         { 'name': '箱ティッシュ', 'url': 'https://www.askul.co.jp/p/1618138/' },
         { 'name': 'ウェットティッシュ', 'url': 'https://www.askul.co.jp/p/1186355/' },
         { 'name': 'ペーパータオル', 'url': 'https://www.askul.co.jp/p/1995269/' },
+        { 'name': '来客用水', 'url': 'https://www.askul.co.jp/p/AR51978/' },
     ]
     print(event)
     try:
