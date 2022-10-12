@@ -96,6 +96,10 @@ void setup()
 
 void loop()
 {
+  if (((3600 * 6) * 1000) < millis()) {
+    M5.Power.reset();
+  }
+
   M5.update();
 
   if (M5.BtnA.wasPressed()) {
