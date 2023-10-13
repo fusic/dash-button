@@ -18,7 +18,7 @@ def lambda_handler(event, context):
     print(event)
     try:
         item = items[event['item']]
-        message = f"<!subteam^{os.environ['SLACK_MENSION_ID']}> {item['name']}の在庫が少なくなりました\n{item['url']}"
+        message = f"<!subteam^{os.environ['SLACK_MENSION_ID']}> <@{os.environ['SLACK_USER_ID']}> {item['name']}の在庫が少なくなりました\n{item['url']}"
         response = client.chat_postMessage(channel=channel, text=message)
         assert response["message"]["text"] == message
     except SlackApiError as e:

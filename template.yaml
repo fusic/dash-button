@@ -17,6 +17,8 @@ Parameters:
     Type: String
   SlackMensionId:
     Type: String
+  SlackUserId:
+    Type: String
 
 Resources:
   NotifyFunction:
@@ -30,6 +32,7 @@ Resources:
           SLACK_BOT_TOKEN: !Ref SlackBotToken
           SLACK_CHANNEL: !Ref SlackChannel
           SLACK_MENSION_ID: !Ref SlackMensionId
+          SLACK_USER_ID: !Ref SlackUserId
       Architectures:
         - x86_64
 
